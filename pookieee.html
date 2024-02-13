@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="RBs3VDkoayEnDSlWfDUYVwheO3FnFQ5RusBfHR4DE5cbORqdxmwHJvY6">
+<title>Leastrio</title>
+    <link phx-track-static rel="stylesheet" href="/assets/app-5bc52112c2c44346735a0c2010ff2cf3.css?vsn=d">
+    <script defer phx-track-static type="text/javascript" src="/assets/app-a188765ba50d2b76b7cfde2a0226d3f0.js?vsn=d"></script>
+    <script src="https://kit.fontawesome.com/542f5f8ac7.js" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/542f5f8ac7.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+<style>
+</style>
+<div class="isolate bg-white">
+  <div class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
+    <svg class="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]" viewBox="0 0 1155 678">
+      <path fill="url(#45de2b6b-92d5-4d68-a6a0-9b9b2abad533)" fill-opacity=".3" d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z"></path>
+      <defs>
+        <linearGradient id="45de2b6b-92d5-4d68-a6a0-9b9b2abad533" x1="1155.49" x2="-78.208" y1=".177" y2="474.645" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#9089FC"></stop>
+          <stop offset="1" stop-color="#FF80B5"></stop>
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+  <main>
+    <div class="relative px-6 lg:px-8">
+      <div class="mx-auto pt-16 pb-28">
+        <div class="text-center">
+          <h1 id="outerTitle" class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+            <a id="title">Will you be my <a id="valentines" class="text-transparent bg-clip-text text-gradient bg-gradient-to-r from-pink-400 via-red-500 to-purple-500">Valentine</a>?</a>
+          </h1>
+        </div>
+      </div>
+
+      <div class="flex justify-center">
+          <img id="teaparty" src="images/teaparty.jpg" class="w-full h-auto" style="display: none;">
+          <img id="gun" src="/images/firing_squad.png" class="w-32 md:w-72 h-auto ">
+          <div id="thingys" class="shrink-0 space-x-8 md:space-x-32" style="position: relative;">
+              <img id="explode" src="/images/explosion.gif" class="w-32 md:w-72 h-auto absolute top-0 right-0" style="display: none;">
+              <img id="plushies" src="/images/plushies.jpg" class="w-32 md:w-72 h-auto">
+          </div>
+      </div>
+
+
+      <br><br>
+
+      <div class="flex justify-center gap-4">
+        <button id="yes" onclick="yesClick()" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-2xl py-2 px-4 rounded-lg">AYCHON🎀 :3</button>
+        <button id="no" onclick="noClick()" class="bg-rose-500 hover:bg-rose-700 text-white font-bold text-2xl py-2 px-4 rounded-lg">naxer Ó⁠╭⁠╮⁠Ò</button>
+      </div>
+
+      <audio id="happy">
+        <source src="/sounds/happy.mp3" type="audio/mpeg">
+      </audio>
+
+      <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
+        <svg class="relative left-[calc(50%+3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%+36rem)] sm:h-[42.375rem]" viewBox="0 0 1155 678">
+          <path fill="url(#ecb5b0c9-546c-4772-8c71-4d3f06d544bc)" fill-opacity=".3" d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z"></path>
+          <defs>
+            <linearGradient id="ecb5b0c9-546c-4772-8c71-4d3f06d544bc" x1="1155.49" x2="-78.208" y1=".177" y2="474.645" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#9089FC"></stop>
+              <stop offset="1" stop-color="#FF80B5"></stop>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+    </div>
+  </main>
+</div>
+<script>
+const image = document.getElementById("explode")
+const ybutton = document.getElementById("yes")
+const nbutton = document.getElementById("no")
+
+const gun = document.getElementById("gun")
+const plushies = document.getElementById("plushies")
+const teaparty = document.getElementById("teaparty")
+const thingys = document.getElementById("thingys")
+
+const happy = document.getElementById("happy")
+
+const outer = document.getElementById("outerTitle")
+
+function hideButtons() {
+  ybutton.style.display = "none";
+  nbutton.style.display = "none";
+}
+
+function yesClick() {
+  hideButtons();
+  gun.style.display = "none";
+  plushies.style.display = "none";
+  teaparty.style.display = "block";
+  thingys.style.display = "none";
+  happy.play();
+  outer.innerText = "yay happy!";
+}
+
+function noClick() {
+  image.style.display = "block";
+  hideButtons();
+  outer.innerText = "razi nabwit da bxo xom aswtenm🎀"
+}
+</script>
+  </body>
+</html>
